@@ -1,0 +1,77 @@
+#board {
+  border: 16px solid black;
+  border-radius: 30%;
+  box-shadow: 0px 0px 150px black;
+  height: 600px;
+  width: 600px;
+  margin:100px auto;
+  position: relative;
+
+}
+
+#circle {
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 0px 0px 55px;
+  cursor: pointer;
+  height: 300px;
+  left: 150px;
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  z-index: 100;
+
+}
+
+.button-one, .button-two, .button-three,  .button-four {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.button-one {
+  background: linear-gradient(to bottom right,green, green);
+  border-radius: 30% 0 0 0;
+}
+
+.button-two {
+  background: linear-gradient(to bottom left, red, red);
+  border-radius: 0 30% 0 0;
+
+
+}
+
+.button-three {
+  background: linear-gradient(to top right, yellow, yellow);
+  border-radius: 0 0 0 30%;
+}
+
+.button-four {
+  background: linear-gradient(to top left, blue, blue);
+  border-radius: 0 0 30% 0;
+}
+
+h1 {
+  color: white;
+  font: 45px Tahoma;
+  margin-bottom: 60px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font: 40px Tahoma;
+  margin-top: 60px;
+  text-align: center;
+}
+
+p {
+  border-top: 50px;
+  font: 20px Tahoma;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+}
