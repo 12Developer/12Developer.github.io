@@ -78,6 +78,21 @@ $(() => {
   } // for loop that loops through sequence array
     // declared var delayTime to equal  i * 800
     // setTimeout takes a function lightButton and will execute it in 800 milliseconds (delayTime)
+  lightButton = () => {
+    var item = sequence.pop();
+    checkGame = true;
 
+    $('#' + item).animate({opacity: .2}, 300).animate({opacity: 1}, 200);
+    usedSequence.push(item);
+    if (sequence.length <= 0) {
+      createClicks();
+    }
+  } // item is equal to the last element in sequence array
+    // checkGame equals true
+    // jQuery find the last element in sequence array and animate the opacity to 0.2 for 300 milliseconds
+    // then animate the opacity to 1 for 200 milliseconds
+    // push the last element from sequence array to the usedSequence array
+    // if the length of the sequence array is less than or equal to 0 run the function createClicks
 
+  
 });
