@@ -29,24 +29,24 @@
   float: left;
 }
 
-.one {
+.green {
   background: linear-gradient(to bottom right,green, green);
   border-radius: 30% 0 0 0;
 }
 
-.two {
+.red {
   background: linear-gradient(to bottom left, red, red);
   border-radius: 0 30% 0 0;
 
 
 }
 
-.three {
+.yellow {
   background: linear-gradient(to top right, yellow, yellow);
   border-radius: 0 0 0 30%;
 }
 
-.four {
+.blue {
   background: linear-gradient(to top left, blue, blue);
   border-radius: 0 0 30% 0;
 }
