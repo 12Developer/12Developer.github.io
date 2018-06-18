@@ -34,12 +34,16 @@ $(() => {
 
   $('#board').append($div1);
  // appended const $div1 to id board
+
   $('#circle').append($h1);
  // appended const $h1 to the id circle
+
   $('#circle').append($p);
  // appended const $p to the id circle
+
   $('#circle').append($h2);
  // appended const $h2 to the id circle
+
   $('#board').append($buttonOne);
   // appended const $buttonOne to id board
 
@@ -63,4 +67,18 @@ $(() => {
 
   const checkGame = false;
   // declared const checkGame to false
+
+  addSequence = () => {
+    let sequenceValue = randNum(1, 4);
+    sequence.push(sequenceValue);
+  }
+  // push random number between 1 ands 4 to the end of sequence array
+
+  playSequence = () => {
+    for (let i = 0; i < sequence.length; i++) {
+      let delayTime = i * 800;
+      setTimeout(lightButton, delayTime);
+    }
+  }
+  // for loops that loops through sequence array
 });
