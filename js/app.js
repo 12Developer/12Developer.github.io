@@ -17,17 +17,17 @@ $(() => {
   const $h2 = $('<h2>').attr('id', 'level').text('Level: 0');
   // declared a h2 tag with an id of level
 
-  const $buttonOne = $('<div>').addClass('button-one');
-  // declared a div tag with a class of button-one
+  const $buttonOne = $('<div>').addClass('button one').attr('id', 1);
+  // declared a div tag with a class of button-one, id 1
 
-  const $buttonTwo = $('<div>').addClass('button-two');
-  // declared a div tag with a class of button-two
+  const $buttonTwo = $('<div>').addClass('button two').attr('id', 2);
+  // declared a div tag with a class of button-two, id 2
 
-  const $buttonThree = $('<div>').addClass('button-three');
-  // declared a div tag with a class of button-three
+  const $buttonThree = $('<div>').addClass('button three').attr('id', 3);
+  // declared a div tag with a class of button-three, id 3
 
-  const $buttonFour = $('<div>').addClass('button-four');
-  // declared a div tag with a class of button-four
+  const $buttonFour = $('<div>').addClass('button four').attr('id', 4);
+  // declared a div tag with a class of button-four, id 4
 
   $('body').append($div);
   // appended const $div to the body
@@ -56,16 +56,16 @@ $(() => {
   $('#board').append($buttonFour);
   // appended const $buttonFour to id board
 
-  const sequence = [];
+  let sequence = [];
   // declared const sequence to empty array;
 
-  const usedSequence = [];
+  let usedSequence = [];
   // declared const usedSequence to empty array;
 
-  const level = 0;
+  let level = 0;
   // declared const level to 0
 
-  const checkGame = false;
+  let checkGame = false;
   // declared const checkGame to false
 
   addSequence = () => {
@@ -81,4 +81,6 @@ $(() => {
     }
   }
   // for loops that loops through sequence array
+  // function setTimeout will run after 800 milliseconds
+
 });

@@ -23,30 +23,30 @@
 
 }
 
-.button-one, .button-two, .button-three,  .button-four {
+.button {
   width: 300px;
   height: 300px;
   float: left;
 }
 
-.button-one {
+.one {
   background: linear-gradient(to bottom right,green, green);
   border-radius: 30% 0 0 0;
 }
 
-.button-two {
+.two {
   background: linear-gradient(to bottom left, red, red);
   border-radius: 0 30% 0 0;
 
 
 }
 
-.button-three {
+.three {
   background: linear-gradient(to top right, yellow, yellow);
   border-radius: 0 0 0 30%;
 }
 
-.button-four {
+.four {
   background: linear-gradient(to top left, blue, blue);
   border-radius: 0 0 30% 0;
 }
