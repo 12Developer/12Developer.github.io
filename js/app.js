@@ -8,7 +8,7 @@ $(() => {
   const $div1 = $('<div>').attr('id', 'circle');
   // declared a div tag with an id of circle
 
-  const $h1 = $('<h1>').attr('id', 'title').text('Simon says');
+  const $h1 = $('<h1>').attr('id', 'title').text('Simon');
   // declared a h1 tag with an id of title
 
   const $p = $('<p>').text('Click the circle to start game');
@@ -66,7 +66,7 @@ $(() => {
   // // declared var checkGame to false
 
   addSequence = () => {
-    var sequenceValue = randNum(1, 4);
+    var sequenceValue = randNum(1, 5);
     sequence.push(sequenceValue);
     // sequenceValue equals randNum between 1 and 4
   } // push sequenceValue to sequence array
@@ -94,5 +94,47 @@ $(() => {
     // push the last element from sequence array to the usedSequence array
     // if the length of the sequence array is less than or equal to 0 run the function createClicks
 
-  
+  createClicks = () => {
+    $('.button').click(function() {
+
+      var item = usedSequence.shift();
+
+      var buttonId = $(this).attr('id');
+
+      $(this).animate({opacity: .2}, 200).animate({opacity: 1}, 100)
+
+      if (item == buttonId) {
+        sequence.push(item);
+
+      if (usedSequence.length <= 0) {
+          level++;
+          $('#level').html('Level: ' + level);
+          removeClicks();
+          addSequence();
+          setTimeout(playSequence, 600);
+    }
+  } else {
+        checkGame = false;
+        $('h1').html('Game Over').css({
+          fontSize: 45,
+          marginBottom: 15,
+          paddingTop: 15
+    });
+        $('p').html('Click the circle to restart');
+        sequence = [];
+        usedSequence = [];
+  }
+    });
+  } // jQuery find the element with class of button on click run function
+    // item equals the first element in usedSequence array
+    // buttonId equals the button with the selected id
+    // jQuery find the button animate the opacityt to .2 for 200 milliseconds
+    // then animate the opacity to 1 for 100 milliseconds
+    // if item is equal to buttonId push item to sequence array
+    // if the usedSequence length is less than or equal to 0
+    // increment the Level
+    // jQuery change the id selector level html to 'Level' + level
+    // function removeClicks
+    // function addSequence
+    // setTimeout takes function playSequence and executes it in 600 milliseconds
 });
