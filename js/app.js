@@ -128,7 +128,7 @@ $(() => {
   } // jQuery find the element with class of button on click run function
     // item equals the first element in usedSequence array
     // buttonId equals the button with the selected id
-    // jQuery find the button animate the opacityt to .2 for 200 milliseconds
+    // jQuery find the button animate the opacity to .2 for 200 milliseconds
     // then animate the opacity to 1 for 100 milliseconds
     // if item is equal to buttonId push item to sequence array
     // if the usedSequence length is less than or equal to 0
@@ -150,5 +150,31 @@ $(() => {
     playSequence();
 
   } // function startGame execute removeClicks, resetGame, addSequence, and playSequence.
+  resetGame = () => {
+    level = 0;
+    $('#level').html('Level: ' + level);
+    $('h1').html('Simon').css({
+      fontSize: 45,
+      marginBottom: 15,
+      paddingTop: 15
+    });
+    $('p').html('Click the circle to start game');
+  };
+  $('#circle').click(function() {
+    if(checkGame === false){
+      startGame();
+    }
+  }); // level equals 0
+      // jQuery find id level change html to Level: 0
+      // jQuery change the h1 to Simon
+      // change font size to 45
+      // change marginBottom to 15
+      // change paddingTop to 15
+      // jQuery change the p to Click the circle to start game
+      // jQuery circle on click if checkGame equals false startGame
+
+  randNum = (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }; // function randNum will generate a randon numhber
 
 });
