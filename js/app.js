@@ -137,4 +137,18 @@ $(() => {
     // function removeClicks
     // function addSequence
     // setTimeout takes function playSequence and executes it in 600 milliseconds
+
+
+  removeClicks = () => {
+   $('.button').unbind();
+ } // jQuery find the element with button and remove event handler from selected elements
+
+  startGame = () => {
+    removeClicks();
+    resetGame();
+    addSequence();
+    playSequence();
+
+  } // function startGame execute removeClicks, resetGame, addSequence, and playSequence.
+
 });
